@@ -1,0 +1,242 @@
+.admin {
+  min-height: 100vh;
+  background-color: #1e2a1f;
+  color: #f3efe3;
+}
+
+.admin-header {
+  padding: 2rem;
+  border-bottom: 1px solid #3a4a3e;
+}
+
+.admin-header h1 {
+  margin: 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 2.2rem;
+}
+
+.admin-contenido {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.admin-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.admin-titulo h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+/* Botón nuevo producto */
+
+.boton-nuevo {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #e8a93b;
+  color: #26190a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boton-nuevo:hover {
+  opacity: 0.9;
+}
+
+/* Lista de productos */
+
+.admin-productos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.admin-producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.2rem;
+  background-color: #26332a;
+  border: 1px solid #3a4a3e;
+  border-radius: 10px;
+}
+
+.admin-producto h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.2rem;
+}
+
+.admin-producto p {
+  margin: 0 0 0.7rem 0;
+  color: #a3b0a1;
+}
+
+.admin-producto > div:first-child {
+  flex: 1;
+}
+
+.admin-producto > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Precio */
+
+.admin-producto span {
+  font-weight: bold;
+}
+
+.admin-producto > div:first-child span {
+  color: #e8a93b;
+}
+
+/* Estado */
+
+.admin-producto > div:last-child span {
+  padding: 0.4rem 0.7rem;
+  border-radius: 20px;
+  background-color: #354638;
+  color: #b9c8b6;
+  font-size: 0.85rem;
+}
+
+/* Botones editar y eliminar */
+
+.admin-producto button {
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.admin-producto button:first-of-type {
+  background-color: #e8a93b;
+  color: #26190a;
+}
+
+.admin-producto button:last-of-type {
+  background-color: #63352f;
+  color: #f3efe3;
+}
+
+.admin-producto button:hover {
+  opacity: 0.85;
+}
+
+/* Formulario */
+
+.product-form {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem;
+  background-color: #26332a;
+  border: 1px solid #3a4a3e;
+  border-radius: 10px;
+}
+
+.product-form h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-family: "Fraunces", Georgia, serif;
+}
+
+.product-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.product-form input,
+.product-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #4a5b4d;
+  border-radius: 6px;
+  background-color: #1e2a1f;
+  color: #f3efe3;
+  font-family: inherit;
+}
+
+.product-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.product-form input:focus,
+.product-form textarea:focus {
+  outline: 2px solid #e8a93b;
+  border-color: #e8a93b;
+}
+
+/* Checkbox */
+
+.product-form-checkbox {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 0.6rem !important;
+}
+
+.product-form-checkbox input {
+  width: auto;
+}
+
+/* Botón del formulario */
+
+.product-form button {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 7px;
+  background-color: #e8a93b;
+  color: #26190a;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.product-form button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .admin-contenido {
+    padding: 1rem;
+  }
+
+  .admin-titulo {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .boton-nuevo {
+    width: 100%;
+  }
+
+  .admin-producto {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-producto > div:last-child {
+    flex-wrap: wrap;
+  }
+
+  .admin-producto button {
+    flex: 1;
+  }
+}

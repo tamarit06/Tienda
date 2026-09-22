@@ -1,0 +1,64 @@
+.tarjeta-producto {
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.9rem;
+}
+
+.tarjeta-producto.no-disponible {
+  opacity: 0.5;
+}
+
+.tarjeta-producto h3 {
+  font-family: var(--fuente-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 0 0 0.3rem;
+}
+
+.tarjeta-producto .descripcion {
+  color: var(--color-texto-tenue);
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.tarjeta-producto-pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.precio {
+  font-family: var(--fuente-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--color-acento);
+}
+
+.boton-agregar {
+  background: var(--color-acento);
+  color: var(--color-acento-texto);
+  border: none;
+  border-radius: 6px;
+  padding: 0.45rem 0.9rem;
+  font-family: var(--fuente-cuerpo);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.boton-agregar:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.boton-agregar:disabled {
+  background: var(--color-borde);
+  color: var(--color-texto-tenue);
+  cursor: not-allowed;
+}

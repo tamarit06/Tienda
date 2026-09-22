@@ -1,0 +1,82 @@
+/* Tokens de diseño compartidos por toda la app y estilos globales */
+:root {
+  --color-fondo: #1e2a1f;
+  --color-superficie: #26332a;
+  --color-superficie-alta: #2e3c32;
+  --color-borde: #3a4a3e;
+  --color-texto: #f3efe3;
+  --color-texto-tenue: #a3b0a1;
+  --color-acento: #e8a93b;
+  --color-acento-texto: #26190a;
+  --color-alerta: #c1443c;
+
+  --fuente-display: "Fraunces", Georgia, serif;
+  --fuente-cuerpo: "Work Sans", -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-cuerpo);
+}
+
+
+/* Layout general de App.tsx */
+.pagina {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido {
+  flex: 1;
+  padding: 2rem;
+  max-width: 62rem;
+}
+.contenido h1 {
+  font-family: var(--fuente-display);
+  font-size: 2.5rem;
+  margin: 0 0 2rem 0;
+  color: var(--color-texto);
+  line-height: 1;
+  text-align: center;
+}
+.estado-info,
+.estado-error {
+  color: var(--color-texto-tenue);
+}
+
+.estado-error {
+  color: var(--color-alerta);
+}
+
+@media (min-width: 900px) {
+  .pagina {
+    flex-direction: row;
+  }
+
+  .contenido {
+    flex: 1;
+  }
+}
+.mensaje-carrito {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: #e8a93b;
+  color: #26190a;
+
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+
+  font-weight: bold;
+
+  z-index: 2000;
+}

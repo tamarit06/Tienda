@@ -1,0 +1,233 @@
+/* =========================
+   CARRITO
+   ========================= */
+
+.carrito {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 380px;
+  height: 100vh;
+
+  background-color: #26332a;
+  color: #f3efe3;
+
+  padding: 1.5rem;
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cuando el carrito está abierto */
+
+.carrito.carrito-abierto {
+  transform: translateX(0);
+}
+
+
+/* =========================
+   FONDO OSCURO
+   ========================= */
+
+.carrito-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 999;
+}
+
+
+/* =========================
+   CABECERA
+   ========================= */
+
+.carrito-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1.5rem;
+}
+
+.carrito-cabecera h2 {
+  margin: 0;
+}
+
+.carrito-cerrar {
+  border: none;
+  background: none;
+
+  color: #f3efe3;
+
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+
+/* =========================
+   CARRITO VACÍO
+   ========================= */
+
+.carrito-vacio {
+  color: #a3b0a1;
+}
+
+
+/* =========================
+   LISTA
+   ========================= */
+
+.carrito-lista {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+
+  overflow-y: auto;
+}
+
+.carrito-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #3a4a3e;
+}
+
+.carrito-item-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.carrito-item-nombre {
+  font-weight: bold;
+}
+
+.carrito-item-precio {
+  color: #e8a93b;
+}
+
+
+/* =========================
+   CONTROLES
+   ========================= */
+
+.carrito-item-controles {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-top: 0.7rem;
+}
+
+.carrito-item-controles button {
+  border: none;
+  border-radius: 5px;
+
+  padding: 0.4rem 0.7rem;
+
+  cursor: pointer;
+}
+
+.carrito-item-quitar {
+  margin-left: auto;
+}
+
+
+/* =========================
+   TOTAL
+   ========================= */
+
+.carrito-total {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: auto;
+  padding-top: 1rem;
+
+  border-top: 1px solid #3a4a3e;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+/* =========================
+   BOTÓN PEDIDO
+   ========================= */
+
+.boton-pedido {
+  width: 100%;
+
+  padding: 1rem;
+  margin-top: 1rem;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #e8a93b;
+  color: #26190a;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.boton-pedido:hover {
+  opacity: 0.9;
+}
+
+.boton-pedido:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* =========================
+   BOTÓN DEL CARRITO
+   ========================= */
+
+.boton-carrito {
+  position: fixed;
+
+  right: 20px;
+  bottom: 20px;
+
+  width: 55px;
+  height: 55px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: #e8a93b;
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+
+  z-index: 900;
+}
+
+
+/* =========================
+   TELÉFONO
+   ========================= */
+
+@media (max-width: 600px) {
+
+  .carrito {
+    width: 100%;
+  }
+
+}
